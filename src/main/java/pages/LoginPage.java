@@ -30,6 +30,7 @@ public class LoginPage {
     public void clickonSignUpButton(){
         page.locator("[data-qa='signup-button']").click();
         // this is a test
+        //This is a test
 
     }
 }
