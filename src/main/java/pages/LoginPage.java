@@ -7,27 +7,28 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class LoginPage {
     Page page;
 
-    public LoginPage(Page page){
+    public LoginPage(Page page) {
         this.page = page;
 
     }
 
-    public void navigatetoSignupPage(){
+    public void navigatetoSignupPage() {
         page.locator("p.fc-button-label").first().click();
         page.locator("[href='/login']").click();
         assertThat(page.getByPlaceholder("Name")).isVisible();
 
     }
-    public void enterUsername(String username){
+
+    public void enterUsername(String username) {
         page.getByPlaceholder("Name").fill(username);
     }
 
-    public void enterEmail(String email){
+    public void enterEmail(String email) {
         page.locator("[data-qa='signup-email']").fill(email);
 
     }
 
-    public void clickonSignUpButton(){
+    public void clickonSignUpButton() {
         page.locator("[data-qa='signup-button']").click();
         // this is a test
         //This is a test
@@ -37,7 +38,17 @@ public class LoginPage {
 
     }
 
-    public void clickonSignUpButton1(){
+    public void clickonSignUpButton1() {
+        page.locator("[data-qa='signup-button']").click();
+        // this is a test
+        //This is a test
+        //To test push
+        // To test branching
+        // hello
+
+    }
+
+    public void clickonSignUpButton2() {
         page.locator("[data-qa='signup-button']").click();
         // this is a test
         //This is a test
